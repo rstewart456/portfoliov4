@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel='stylesheet' href='./css/Style.css'>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="./main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronald Portfolio Page</title>
+</head>
+
+<body>
+    <div class="main-app">
+        <div class="sidebar">
+            <div class="sidebar-welcome">Welcome</div>
+            <img src='./avatar.png' alt="avatar" />
+            <ul>
+                <li>
+                    <a href="#home" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fas fa-home"></i></span>
+                        <span class="sidebar-title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fas fa-store"></i></span>
+                        <span class="sidebar-title">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fas fa-user"></i></span>
+                        <span class="sidebar-title">Resume</span>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="mailto:rstewart456@gmail.com" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="sidebar-title">Email</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/RonaldS22601354" target="_blank" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fab fa-twitter-square"></i></span>
+                        <span class="sidebar-title">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ronald-stewart-6544808b/" target="_blank" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fab fa-linkedin-in"></i></span>
+                        <span class="sidebar-title">Linkedin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/rstewart456" target="_blank" onclick="slideBar()">
+                        <span class="sidebar-icon"><i class="fab fa-github"></i></span>
+                        <span class="sidebar-title">Github</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-body">
+            <div class="menu">
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+                <i class="far fa-times-circle" onclick="closeMenu()"></i>
+            </div>
+            <section class="home" id="home">
+                <p>Hello my name is <span class="home-name">Ronald</span><br />
+                    I'm a web developer</p>
+            </section>
+            <section class="projects" id="projects">
+                <h1>Projects</h1>
+                <div class="proj-app"></div>
+            </section>
+            <section class="resume" id="about">
+                <div class='about-title'>
+                    <h1>Ronald Resume</h1>
+                </div>
+                <div class='about-body'>
+                    <p class='about-indent'>I am an aspiring web developer.  I am seeking a web developer position with a growing company where I can learn and make a positive impact. I am eager to apply my knowledge in Vue, React, and Google Firebase as a professional developer position.</p>
+                    <p class='about-indent'>I am also a nerd at heart. I love sci-fi, and anime. Some of my
+                        favorite shows are The Flash, The Expanse, Star Wars, Star Trek,
+                        Tenchi Muyo! War on Geminar, and The Rise of the Shield Hero.</p>
+                    <h2 class='py-5'>Education</h2>
+                    <h4>South University - Savannah G.A.</h4>
+                    <h6>2012-2014</h6>
+                    <p>Associate in Informtaion Technology</p>
+                    <h2 class='py-5'>Work Experinces</h2>
+                    <h4>AutoZone - Parts Sales Manager</h4>
+                    <h6>Octerber 2008 - Present</h6>
+                    <p>Open or Close the store, Supervise 2 to 6 employees, Cash Handling, Handle Customer Concerns, and
+                        Inventory Management</p>
+                    <h4>Wave2Net</h4>
+                    <h6>2007</h6>
+                    <p>Provide Tier one support for (WISP) Wireless Internet Service Provider Customers</p>
+                </div>
+                <div class='about-contact'>
+                    <h3>Contact Me</h3>
+                    <div class="contact-link">
+                        <a href='mailTo:rstewart456@gmail.com'><i class="fas fa-envelope"></i>Email</a>
+                        <a target="_blank" href='https://twitter.com/RonaldS22601354'><i
+                                class="fab fa-twitter-square"></i>twitter</a>
+                        <a target="_blank" href='https://www.linkedin.com/in/ronald-stewart-6544808b/'><i
+                                class="fab fa-linkedin"></i>Linkiden</a>
+                        <a target="_blank" href='https://github.com/rstewart456'><i
+                                class="fab fa-github"></i>Github</a>
+                    </div>
+                </div>
+                <div class='about-achivements'>
+                    <div class='about-achivements-title'>Skills</div>
+                    <p>Vue, React, Redux, Nodejs,<br />HTML,CSS, Tailwindcss,<br />express<br /><br />
+                        Static hosting on Amazon Web Services (AWS)<br /><br />
+                        Github<br /><br />
+                        Firebase, MongoDB</p>
+                </div>
+                <div class="about-tweets">
+                    <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/RonaldS22601354?ref_src=twsrc%5Etfw">Tweets by RonaldS22601354</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                </div>
+            </section>
+            <section class="footer">
+                <div class="license">MIT license</div>
+                <div class="thankYou">Thank you for visiting</div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.proj-card {
+    display: grid;
+    grid-template-rows: 50px 200px 150px 50px;
+    width: 350px;
+    margin: 30px;
+    border-radius: 5%;
+    background-color: var(--bg-secondary);
+    color: white;
+}
+.card-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.card-image {
+    height: 100%;
+    width: 100%;
+}
+.card-parag {
+    padding: 0px 10px;
+}
+.proj-app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+}
+.card-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 5%;
+}
+.card-links a:hover {
+    transform: scale(1.4);
+}

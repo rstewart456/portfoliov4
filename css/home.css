@@ -1,0 +1,28 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;}
+.home-name {
+    font-size: 5rem;
+    color: violet;
+}
+
+.home p {
+    animation: slide 0.8s ease-in;
+}
+
+@keyframes slide {
+    0% {
+        transform: skewX(53deg) translateX(500px);
+    }
+    70% {
+        transform: skewX(-28deg) translateX(-200px);
+    }
+    100% {
+        transform: skewX(0deg) translateX(0px);
+    }
+}

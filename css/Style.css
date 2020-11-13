@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import './home.css';
+@import './projects.css';
+@import './resume.css';
+
+:root {
+    --bg-secondary:  rgb(78, 78, 78);
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.sidebar {
+    background-color: var(--bg-secondary);
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sidebar img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: black 2px solid;
+    margin: 10px 0px 0px 25%;
+}
+.sidebar-welcome {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.sidebar ul {
+    margin: 0px 10% 0px -10%;
+    list-style: none;
+    font-size: 1.5rem;
+}
+.sidebar ul li {
+    margin: 10px;
+    padding: 10px;
+    background: blue;
+    border-radius: 5%;
+}
+.sidebar ul li:hover {
+    transform: scale(1.3);
+    box-shadow: 2px 4px 5px black;
+}
+.sidebar ul:first-child {
+    position: absolute;
+}
+.sidebar ul:last-child {
+    position: absolute;
+    bottom: 0px;
+}
+.menu {
+    position: fixed;
+    font-size: 32px;
+    margin: 20px 0px 0px 20px;
+    float: left;
+}
+.fa-bars {
+    display: none;
+}
+.fa-times-circle {
+    display: none;
+    margin-left: 202px;
+}
+.main-body {
+    height: 100vh;
+    width: auto;
+    margin-left: 200px;
+    background-color: cornsilk;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    animation: bodySlide 0.5 ease-in;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--bg-secondary);
+}
+@media only screen and (max-width: 850px) {
+    .main-body {
+        margin-left: 0px;
+    }
+    .sidebar {
+        z-index: 100;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    .sidebar ul:last-child {
+        display: block;
+    }
+  }
+
+  @media only screen and (max-height: 580px) {
+      .sidebar ul:last-child {
+        display: none;
+      }
+  }
