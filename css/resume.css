@@ -52,10 +52,7 @@
     padding: 10px 0px;
 }
 
-.about-tweets {
-    overflow: auto;
-    grid-area: about-tweets;
-}
+
 .about-indent {
     text-indent: 50px;   
 }
