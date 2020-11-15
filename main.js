@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 window.addEventListener('resize', () => {
-    if(window.innerWidth < 850) {
+    if(window.innerWidth <= 850) {
         document.querySelector('.sidebar').style.width = '0'
         document.querySelector('.main-body').style.marginLeft = '0'
         document.querySelector('.fa-bars').style.display = 'block'
         document.querySelector('.fa-times-circle').style.display = 'none'
-    } else {
+    } else if(window.innerWidth >= 851) {
         document.querySelector('.sidebar').style.width = '200px'
         document.querySelector('.main-body').style.marginLeft = '200px'
         document.querySelector('.fa-times-circle').style.display = 'none'

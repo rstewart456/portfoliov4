@@ -92,7 +92,15 @@ a {
         margin-left: 0px;
     }
     .sidebar {
+        width: 0;
         z-index: 100;
+    }
+    .sidebar ul li {
+        margin: 5px;
+        padding: 5px;
+    }
+    .fa-bars {
+        display: block;
     }
   }
   @media only screen and (max-width: 380px) {
